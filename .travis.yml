@@ -15,7 +15,7 @@ before_install:
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx --version
 - sfdx plugins --core
-- sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile ~/certificates/server.key
+- sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile $JWT_KEY_FILE
   --username $USERNAME --setdefaultdevhubusername -a HubOrg --instanceurl https://test.salesforce.com
 
 script:
